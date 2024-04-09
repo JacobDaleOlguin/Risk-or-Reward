@@ -1,11 +1,9 @@
 import React from 'react';
 import { Container, Grid } from '@mui/material';
 import InfoContainer from './components/InfoContainer';
-import PurchaseContainer from './components/PurchaseContainer';
-import Box from './components/Box'; // Assuming this is your 3D component
+import Box from './components/Box'; 
 import Vapor from './components/Vapor';
 import { Canvas } from '@react-three/fiber';
-import './App.css'; // Assuming you have a CSS file for global styles
 
 function App() {
   return (
@@ -16,17 +14,27 @@ function App() {
         <Box />
         <Vapor />
       </Canvas>
-      <Container maxWidth="lg" style={{ position: 'absolute', top: '0', pointerEvents: 'auto' }}> // Changed 'none' to 'auto'
-  <Grid container spacing={4}>
-    <Grid item xs={12} md={6}>
-      <InfoContainer />
-    </Grid>
-    <Grid item xs={12} md={6} style={{ pointerEvents: 'auto' }}> // Specifically enable pointer events here if needed
-      <PurchaseContainer />
-    </Grid>
-  </Grid>
-</Container>
+      <Container maxWidth="lg" style={{ position: 'absolute', top: '0', pointerEvents: 'auto' }}> 
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={6}>
+          <iframe 
+  src="http://tokentool.bitbond.com/tokensale/0xCCCEd1f42E6B7AD8a7C5a8575192153dBBb8a999?chainId=11155111"
+  title="description" 
+  style={{ 
+    top: '10%', 
+    width: '95%', 
+    height: '750px', 
+    filter: 'invert(1) hue-rotate(180deg)', 
+    position: 'relative' 
+  }}
+/>
 
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <InfoContainer />
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   );
 }
