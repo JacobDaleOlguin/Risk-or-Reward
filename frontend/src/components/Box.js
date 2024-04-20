@@ -21,13 +21,13 @@ function Box(props) {
     const handleMouseMove = (event) => {
       updateMousePosition(event.clientX, event.clientY);
     };
-
+  
     window.addEventListener('mousemove', handleMouseMove);
-
+  
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [size.width, size.height]); // Depend on size to recalculate when it changes
+  }, [size.width, size.height, updateMousePosition]); // Now updateMousePosition is a dependency
 
   useFrame(() => {
     // Use mouse position to modify the mesh rotation
