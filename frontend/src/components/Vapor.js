@@ -1,9 +1,9 @@
-import React, { useMemo, useRef, useEffect, useState, useLayoutEffect } from 'react';
+import React, { useRef, useState, useLayoutEffect } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 
 const Vapor = () => {
   const mesh = useRef();
-  const { viewport, mouse } = useThree();
+  const { mouse } = useThree();
   const count = 5000; // Number of particles
   const [positions, setPositions] = useState(new Float32Array(count * 3));
 
