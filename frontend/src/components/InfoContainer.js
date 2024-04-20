@@ -10,8 +10,8 @@ function InfoContainer() {
   ];
 
   return (
-    <Grid item xs={12} md={6}>
-      <Paper elevation={3} style={{ padding: '20px', margin: '20px', height: '100%' }}>
+    <Grid item xs={20} md={9}>
+      <Paper elevation={3} style={{ padding: '20px', margin: '20px', height: '100%', opacity: .8 }}>
         <Typography variant="h5" gutterBottom>
           Allocation of Funds
         </Typography>
@@ -25,9 +25,11 @@ function InfoContainer() {
           </Box>
         ))}
         <Typography variant="h6" mt={2}>Reward for Risk Program</Typography>
-        <Typography variant="body1">
-          1% of your presale purchase will be rewarded to the purchaser each year on the winter solstice for the next three years (2024, 2025, 2026).
-        </Typography>
+        <Typography variant="body1" style={{}}>50% of the total supply is designated for initial sales, intended to be quickly distributed.</Typography>
+        <Typography variant="body1" style={{}}>15% is allocated for marketing and development expenses, with disbursements tied to achieving specific milestones outlined in the roadmap.</Typography>
+        <Typography variant="body1" style={{}}>10% is reserved for a burn goal, to be executed post-launch to help manage supply.</Typography>
+        <Typography variant="body1" style={{}}>25% is committed to a liquidity pool, ensuring stability and facilitating transactions.</Typography>
+        <Typography variant="body1" style={{}}>50% of tokens are available during the presale phase. Any remaining tokens after the presale will either be added to the liquidity pool or burned, based on a community vote.</Typography>
       </Paper>
     </Grid>
   );
