@@ -15,15 +15,6 @@ function InfoContainer() {
         <Typography variant="h5" gutterBottom>
           Allocation of Funds
         </Typography>
-        {allocations.map(({ label, value, Icon }) => (
-          <Box key={label} mb={2} display="flex" alignItems="center">
-            <Icon style={{ marginRight: 10 }} /> {/* Icon */}
-            <Typography variant="body1" style={{ flexGrow: 1 }}>
-              {value}% {label}
-            </Typography>
-            <LinearProgress variant="determinate" value={value} style={{ width: '100%' }} />
-          </Box>
-        ))}
         <Typography variant="h6" mt={2}>Reward for Risk Program</Typography>
         <Typography variant="body1" style={{}}>50% of the total supply is designated for initial sales, intended to be quickly distributed.</Typography>
         <Typography variant="body1" style={{}}>15% is allocated for marketing and development expenses, with disbursements tied to achieving specific milestones outlined in the roadmap.</Typography>
